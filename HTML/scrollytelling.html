@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <title>Hello World</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--add required stylesheets-->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!--leaflet css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/layout2.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="scrollyTelling\storymap-master\assets\favicon.ico" type="image/x-icon">
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="scrollyTelling\storymap-master\dist\storymap.2.5.css">
+
+    <!--add required libraries-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <!--jquery and Popper-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!--boostrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--leaflet.ajax for asynchronously adding geojson data-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--story map plugin-->
+    <script src="scrollyTelling\storymap-master\dist\storymap.2.5.js"></script>
+
+</head>
+<body   data-spy="scroll" data-target=".header">
+
+  <header class="header navbar-fixed-top">
+      <!-- Navbar -->
+      <nav class="navbar" role="navigation">
+
+        <div class="logo">
+            <a class="logo-wrap" href="#body" style="position:relative  !important;  margin-left: 10px  !important;">
+              <img class="logo-img logo-img-main" src="img/hot_logo.png" alt="Asentus Logo" style="width: 295%;">
+                <img class="logo-img logo-img-active" style="display:none" src="" alt="Asentus Logo">
+            </a>
+        </div>
+
+          <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="menu-container js_nav-item">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="toggle-icon"></span>
+                  </button>
+
+                  <!-- Logo -->
+
+                  <!-- End Logo -->
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse nav-collapse">
+                  <div class="menu-container">
+                      <ul class="nav navbar-nav navbar-nav-right">
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" target="_blank" href="https://www.hotosm.org/impact-areas/disaster-response/" >Disaster Response</a></li>
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" target="_blank" href="https://www.hotosm.org/">HOTOSM.org</a></li>
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" target="_blank" href="https://tasks.hotosm.org/">Tasking Manager</a></li>
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" target="_blank" href="https://tasks.hotosm.org/explore">Start Mapping!</a></li>
+                          <!-- <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="./gallery.html">Gallery</a></li> -->
+                      </ul>
+                  </div>
+              </div>
+              <!-- End Navbar Collapse -->
+          </div>
+      </nav>
+      <!-- Navbar -->
+  </header>
+
+  <div id="storymap" class="container-fluid">
+      <div class="row">
+          <div class="col-sm-6 col-md-8 storymap-map"></div>
+          <div class="col-sm-6 col-md-4 storymap-story">
+            <section data-scene="scene1" style="margin: 13%;">
+                <h2><a style="background-color:#d73f3f;color:#ffffff;font-family: 'Barlow Condensed', sans-serif;">&nbspCALL TO ACTION&nbsp</a></h2>
+                <p style="font-family: 'Barlow', sans-serif;">Maps are critical in the hours, days, and weeks after a disaster to help the right people and the right supplies get to the right place, at the right time, increasing the potential to save lives. In 2020, HOT has led the coordination of 5 mapping responses to disastrous events -also known as Activations- and played a supporting role in 4 other responses occurring around the globe, all amid a global pandemic crisis. Would you like to contribute to HOT’s humanitarian mission?</p>
+                <p style="font-family: 'Barlow', sans-serif;">Besides mapping at the <a  style="color:#d73f3f;" href="https://tasks.hotosm.org/" target="_blank">Tasking Manager</a>, you can spread the word directly with friends and family, and by tagging @HOTOSM in your Social Media. Additionally, if you are an experienced OpenStreetMap contributor, you could become a Validator and help us ensure high-quality data is delivered to responders and aid agencies,  sign up in our <a  style="color:#d73f3f;" href="https://bit.ly/HOTValidators" target="_blank">validator application page</a> Last, if you’re over-the-top dedicated like we are and want to be a part of the Disaster Services Team (DST), you can start by attending meetings of the Activation Working Group. Ask how in our <a  style="color:#d73f3f;" href="https://hotosm.slack.com/archives/C4MMB6PD4" target="_blank">#disaster-mapping</a> Slack channel.
+                </p>
+                <p style="font-family: 'Barlow', sans-serif;">
+                    <a href="https://twitter.com/hotosm?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                      </svg></a> &nbsp&nbsp
+                      <a href="https://www.instagram.com/hot.osm/?hl=en" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16" >
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                      </svg></a> &nbsp&nbsp
+                      <a href="https://www.facebook.com/hotosm/" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                      </svg></a> &nbsp&nbsp
+                      <a href="https://www.linkedin.com/company/humanitarian-openstreetmap-team/" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                      </svg></a>
+                </p>
+                <img align="center" style="width: 100%; height: 40%;" src="img/other/Ramani_Huria_TZ_2.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section>
+            <section data-scene="scene2" style="margin-top: 50%;">
+                <h2><a style="background-color:#d73f3f;color:#ffffff;font-family: 'Barlow Condensed', sans-serif;">&nbsp9 ACTIVATIONS IN 2020&nbsp</a></h2>
+                <p ><ol>
+                    <li class="a"><p ></p></li>
+                    <li class="a"><p ><b style="color:#d73f3f;">MARCH 2019 - ONGOING</b> - <b style="color:#000000;"> Venezuela</b><br><a style="color:#a6a7aa;">195</a> contributors mapped <a style="color:#a6a7aa;">407,882</a> buildings -<br><a  style="color:#a6a7aa;" href="https://wiki.openstreetmap.org/wiki/Ayuda_Venezuela" target="_blank">#AyudaVenezuela, More Info</a></p></li>
+                    <li class="a"><p ><b style="color:#d73f3f;">DECEMBER 2019 - DECEMBER 2020</b> - <b style="color:#000000;">Djibouti Flooding</b><br><a style="color:#a6a7aa;">xx</a> contributors had mapped <a style="color:#a6a7aa;">xx</a> buildings -<br><a  style="color:#a6a7aa;" href="https://en.wikipedia.org/wiki/2020_East_Africa_floods" target="_blank">#Djibouti_Floods_2019, More Info</a></p></li>
+                    <li class="a"><p ><b style="color:#d73f3f;">MARCH 2020 - ONGOING</b> - <b style="color:#000000;">Global COVID-19 </b><br><a style="color:#a6a7aa;">20 300+</a> contributors mapped over <a style="color:#a6a7aa;">4.2</a> million map features -<br><a  style="color:#a6a7aa;" href="https://wiki.openstreetmap.org/wiki/COVID19" target="_blank">#covid19, More Info</a></p></li>
+                    <li class="a"><p ><b style="color:#d73f3f;">MAY 2020</b> - <b style="color:#000000;">West Bengal Cyclone Amphan</b><br><a style="color:#a6a7aa;">xx</a> contributors mapped <a style="color:#a6a7aa;">xx</a> buildings -<br><a  style="color:#a6a7aa;" href="https://en.wikipedia.org/wiki/Cyclone_Amphan" target="_blank">#CycloneAmphan, More Info</a></p></li>
+                    <li class="a"><p ><b style="color:#d73f3f;">AUGUST 2020</b> - <b style="color:#000000;">Beirut Port Explosion</b><br><a style="color:#a6a7aa;">220</a> contributors made <a style="color:#a6a7aa;">516,553</a> map changes -<br><a  style="color:#a6a7aa;" href="https://wiki.openstreetmap.org/wiki/2020_Beirut_Port_Explosion" target="_blank">#BeirutPortExplosion, More Info</a></p></li>
+                    <li class="a"><p ><b style="color:#d73f3f;">OCTOBER 2020</b> - <b style="color:#000000;">Izmir, Turkey Earthquake</b><br><a style="color:#a6a7aa;">352</a> mappers had made <a style="color:#a6a7aa;">524,489</a> changes to OpenStreetMap -<br><a  style="color:#a6a7aa;" href="https://wiki.openstreetmap.org/wiki/2020_Aegean_Sea_Earthquake" target="_blank">#izmirdepremi, More Info</a></p></li>
+                    <li class="a"><p ><b style="color:#d73f3f;">OCTOBER 2020</b> - <b style="color:#000000;">Philippines Cyclone Molave</b><br><a style="color:#a6a7aa;">81</a> mappers made <a style="color:#a6a7aa;">250,940</a> changes to OpenStreetMap -<br><a  style="color:#a6a7aa;" href="https://wiki.openstreetmap.org/wiki/CycloneMolave" target="_blank">#CycloneMolave, More Info</a></p></li>
+                    <li class="a"><p ><b style="color:#d73f3f;">NOVEMBER 2020</b> - <b style="color:#000000;">Philippines Typhoons: Rolly & Ulysses</b><br><a style="color:#a6a7aa;">xx</a> contributors had mapped <a style="color:#a6a7aa;">xx</a> buildings -<br><a  style="color:#a6a7aa;" href="https://www.mapbeks.org/post/mapbeks-full-support-in-ty-rolly-mapping-operations" target="_blank">#RollyPH, More Info</a></p></li>
+                    <li class="b"><p ><b style="color:#d73f3f;">NOVEMBER 2020</b> - <b style="color:#000000;">Central America Hurricanes: Eta & Iota</b><br><a style="color:#a6a7aa;">xx</a> contributors had mapped <a style="color:#a6a7aa;">xx</a> buildings -<br><a  style="color:#a6a7aa;" href="https://wiki.openstreetmap.org/wiki/HurricaneEta" target="_blank">#HurricaneEta, More Info</a></p></li>
+                  </ol> </p>
+                <!-- <img align="center" style="width: 100%; height: 40%;" src="img/1920x1080/flooding.JPG" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island"> -->
+            </section>
+            <section data-scene="scene3" style="margin-top: 50%;">
+                <h2><a style="background-color:#d73f3f;color:#ffffff;font-family: 'Barlow Condensed', sans-serif;">&nbspASIA-PACIFIC TYPHOONS&nbsp</a></h2>
+                <p><br>The first Tropical Storm of the North Indian Ocean Cyclone Season became <a  style="color:#d73f3f;" href="https://en.wikipedia.org/wiki/Cyclone_Amphan" target="_blank">Super Cyclonic Storm Amphan</a>. The community in India was able to manage this response with HOT support for mapper and validator recruitment, and documentation assistance.</p>
+                  <!-- <p><br></p> -->
+                <!-- <img style="width: 90%; height: 40%; margin-left: auto; margin-right: auto;" src="img/otherLogos/graficas2.png" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+                <p><br></p> -->
+                <p>Typhoon Molave landed in the Philippines in late October. Fortunately, the local community was actively mapping the area struck before the storm hit. Typhoon Molave quickly restrengthened and continued its course to Viet Nam, where HOT Indonesia has been working on the road network and the local community is starting to get organized. The Disaster Services Team worked with locals as well as the United Nations Development Program (UNDP) to identify the hardest hit areas, some of the final mapping of this response is still on the Tasking Manager (<a  style="color:#d73f3f;" href="https://tasks.hotosm.org/" target="_blank">tasks.hotosm.org</a>).</p>
+                  <!-- <p><br></p> -->
+                  <p>In the meantime, the Philippines was the target of two more storms - locally named Rolly and Ulysses. While things were busy globally, the HOT office in the Philippines as well as our global Disaster Services staff supported these responses with promotion of projects and documentation. Special thanks to <a  style="color:#d73f3f;" href="https://www.mapbeks.org/post/mapbeks-full-support-in-ty-rolly-mapping-operations" target="_blank">Mapbeks</a> and the local OSM Philippines group for the excellent management of these incidents. Some last remaining validation is required on the projects.</p>
+                    <p><br></p>
+                    <img style="width: 90%; height: 40%; margin-left: auto; margin-right: auto;" src="img/1920x1080/flooding.JPG" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+                    <p><br></p>
+                <!-- <img style="width: 90%; height: 40%; margin-left: auto; margin-right: auto;" src="img/400x700/collage.png" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island"> -->
+            </section>
+            <section data-scene="scene4" style="margin-top: 50%;">
+                <h2><a style="background-color:#d73f3f;color:#ffffff;font-family: 'Barlow Condensed', sans-serif;">&nbspCENTRAL AMERICA HURRICANES&nbsp</a></h2>
+                <p><br>The first of two storms to strike Central America made landfall in Nicaragua. Hurricane Eta caused storm surge and flooding along the coast as well as major rain events to neighboring countries - Honduras, Guatemala, Panama and Colombia. Hurricane Iota, the latest recorded Category 5 storm in the Atlantic Hurricane season also targeted the Nicaragua coast just two weeks and 15 miles (9.3 kilometers) apart.</p>
+                  <!-- <p><br></p> -->
+                <!-- <img style="width: 90%; height: 40%; margin-left: auto; margin-right: auto;" src="img/otherLogos/graficas2.png" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+                <p><br></p> -->
+                <p>HOT has been managing the response in Nicaragua and Honduras as, although we were able to connect with local communities, they were unable to manage the request we had from Copernicus. There is still mapping left to do, visit the <a  style="color:#d73f3f;" href="https://tasks.hotosm.org/" target="_blank">Tasking Manager</a> to find the remaining projects, or visit the<a  style="color:#d73f3f;" href="https://wiki.openstreetmap.org/wiki/HurricaneEta" target="_blank">Hurricane Eta wiki-page</a> for more information.</p>
+                  <!-- <p><br></p> -->
+                  <!-- <p>All the while, the Philippines was the target of two more storms - locally named Rolly, then Ulysses [8]. While things were busy globally, the HOT office in the Philippines as well as our global Disaster Services staff supported these responses with promotion and documentation. Special thanks to Mapbeks (https://www.mapbeks.org/) and the local OSM Philippines group for the very capable management of these incidents. Only some last remaining validation is required on the projects.</p> -->
+                    <p><br></p>
+                    <img style="width: 90%; height: 40%; margin-left: auto; margin-right: auto;" src="img/other/2020_CIMSS_29L_Eta_visible_infrared_map_0500-1030Z.gif" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+                    <p><br></p>
+                <!-- <img style="width: 90%; height: 40%; margin-left: auto; margin-right: auto;" src="img/400x700/collage.png" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island"> -->
+            </section>
+            <section data-scene="scene5" style="margin-top: 50%;">
+                <h2><a style="background-color:#d73f3f;color:#ffffff;font-family: 'Barlow Condensed', sans-serif;">&nbspAEGEAN EARTHQUAKE&nbsp</a></h2>
+                <p>A <a  style="color:#d73f3f;" href="https://wiki.openstreetmap.org/wiki/2020_Aegean_Sea_Earthquake" target="_blank">7.0 earthquake shook the Aegean Sea</a>, causing major damage in Izmir, Turkey [6]. The local community was quick to respond and our partner in the region, <a  style="color:#d73f3f;" href="http://yercizenler.org" target="_blank">http://yercizenler.org</a>, jumped into action. HOT supported with mapper and validator recruiting, all while monitoring Typhoon Molave passing the Philippines and heading for it’s next landfall to Viet Nam.</h7>  </p>
+                <img style="width: 100%; height: 40%;" src="img/other/9717_Project_Map_Screenshot_(10-31-2020).png" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+                <!-- <p><br>These 4 categories are insufficient to capture the complexity of Regla, so we created the category of "Resilient architecture", which identifies the structures that have different construction stages. The intention is to visualize the historical pattern of the structures of Regla, and to identify the degree of construction of self-help that exists in the neighborhood. In this study we find that <h7 style="font-weight: bold;"> 75% of the structures of the Regla have been modified by their inhabitants, and that most of them (62%) are of the colonial or neo-classical category.</h7> </p>
+                <img align="center" style="width: 100%; height: 40%;" src="img/400x700/wood.png" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island"> -->
+            </section>
+            <section data-scene="scene6" style="margin-top: 50%;">
+                <h2><a style="background-color:#d73f3f;color:#ffffff;font-family: 'Barlow Condensed', sans-serif;">&nbspBEIRUT EXPLOSION&nbsp</a></h2>
+                <p style="font-family: 'Barlow', sans-serif;"> A large amount of ammonium nitrate stored for years at the <a  style="color:#d73f3f;" href="https://wiki.openstreetmap.org/wiki/2020_Beirut_Port_Explosion" target="_blank">Beirut Port (Lebanon)</a>,  exploded on August 4, 2020. The blast created serious damage in the city, and reports came in from as far as 24km from the explosion center. Although the local community was just getting started, the downtown area was already well mapped by locals. HOT led the mapping projects for an extended area beyond the city center to assist planning and service delivery of the Lebanese  Red Cross. Visit <a  style="color:#d73f3f;" href="https://openmaplebanon.org/" target="_blank">https://openmaplebanon.org/</a> to learn more about the local communities efforts and what they plan to map next.</p>
+                <img align="center" style="width: 100%; height: 40%;" src="img/other/Damages_after_2020_Beirut_explosions_1.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section>
+            <section data-scene="scene7" style="margin-top: 50%;">
+                <h2><a style="background-color:#d73f3f;color:#ffffff;font-family: 'Barlow Condensed', sans-serif;">&nbspCOVID-19 RESPONSE&nbsp</a></h2>
+                <p style="font-family: 'Barlow', sans-serif;">In March 2020 the Disaster Services Team Activated to provide geospatial data, maps, and training to identified countries in need. Still ongoing, <a  style="color:#d73f3f;" href="https://wiki.openstreetmap.org/wiki/COVID19" target="_blank">HOT’s global response to COVID-19</a> is the largest response ever undertaken by the organization. The gaps and needs of this response have originated and articulated an unprecedented level of internal coordination, between HOT’s different teams, and external collaboration with communities, organizations, agencies, and governments.</p>
+                </p>
+                <p style="font-family: 'Barlow', sans-serif;">
+                    <a href="https://tasks.hotosm.org/" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                      </svg></a> &nbsp&nbsp
+                      <a href="https://tasks.hotosm.org/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16" >
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                      </svg></a> &nbsp&nbsp
+                      <a href="https://tasks.hotosm.org/" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                      </svg></a> &nbsp&nbsp
+                      <a href="https://tasks.hotosm.org/" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                      </svg></a>
+                </p>
+                <img align="center" style="width: 100%; height: 40%;" src="img/other/ProductsDisplay.jpeg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section>
+            <!-- <section data-scene="scene6" style="margin-top: 50%;">
+                <h2>Renovacion / Renovation</h2>
+                <p>La principal característica de este tipo de arquitectura es la utilización de madera. Aunque en la mayoría de los casos ya es el elemento estructural, sigue siendo su principal material decorativo. Con techos de doble altura y techos de teja, este tipo de arquitectura abarca del siglo XIX al XX.</p>
+                <img style="width: 100%; height: 40%;" src="https://s3.amazonaws.com/regla.survey/gallery/ces/cespedes_block37/cespedes_block37_5a.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section>
+            <section data-scene="scene7" style="margin-top: 50%;">
+                <h2>Adicion / Addition</h2>
+                <p>La principal característica de este tipo de arquitectura es la utilización de madera. Aunque en la mayoría de los casos ya es el elemento estructural, sigue siendo su principal material decorativo. Con techos de doble altura y techos de teja, este tipo de arquitectura abarca del siglo XIX al XX.</p>
+                <img style="width: 100%; height: 40%;" src="https://s3.amazonaws.com/regla.survey/gallery/gom/gomez_block9/1a.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section>
+            <section data-scene="scene8" style="margin-top: 50%;">
+                <h2>Modern / Moderna</h2>
+                <p>La principal característica de este tipo de arquitectura es la utilización de madera. Aunque en la mayoría de los casos ya es el elemento estructural, sigue siendo su principal material decorativo. Con techos de doble altura y techos de teja, este tipo de arquitectura abarca del siglo XIX al XX.</p>
+                <img style="width: 100%; height: 40%;" src="https://s3.amazonaws.com/regla.survey/gallery/gar/garcia_block37/garcia_block37_8a.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section>
+            <section data-scene="scene9" style="margin-top: 50%;">
+                <h2>Madera / Wood</h2>
+                <p>La principal característica de este tipo de arquitectura es la utilización de madera. Aunque en la mayoría de los casos ya es el elemento estructural, sigue siendo su principal material decorativo. Con techos de doble altura y techos de teja, este tipo de arquitectura abarca del siglo XIX al XX.</p>
+                <img style="width: 100%; height: 40%;" src="https://s3.amazonaws.com/regla.survey/gallery/ces/cespedes_block39/cespedes_block39_7a.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section> -->
+            <!-- <section data-scene="scene10" style="margin-top: 50%;">
+                <h2>Madera / Wood</h2>
+                <p>La principal característica de este tipo de arquitectura es la utilización de madera. Aunque en la mayoría de los casos ya es el elemento estructural, sigue siendo su principal material decorativo. Con techos de doble altura y techos de teja, este tipo de arquitectura abarca del siglo XIX al XX.</p>
+                <img style="width: 100%; height: 40%;" src="https://s3.amazonaws.com/regla.survey/gallery/ces/cespedes_block39/cespedes_block39_7a.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section> -->
+          </div>
+
+      </div>
+  </div>
+  <script type="text/javascript">
+
+      var layers = {
+          layer1: {
+              layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+              legend: '<i style="background:#eb879c; opacity: 1.5"></i><p ><b style="color:black">Activation</b></p><br><i style="background:#eb879c; opacity: 1.5"></i><p ><b style="color:black">COVID-19</b></p>'
+              
+          },
+          layer2: {
+            layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+            legend: '<i style="background:#eb879c; opacity: 1.5"></i><p ><b style="color:black">Activation</b></p>'
+          },
+          layer3: {
+              layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA')
+          },
+          layer4: {
+            layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+            legend: '<i style="background:#fff; opacity: 1.5"></i><p ><b style="color:black">Edificios / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBuildings</b></p>'
+                  },
+          layer5: {
+              layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+          },
+          layer6: {
+              layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+
+          },
+          layer6: {
+            layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+            legend: '<i style="background:#eb879c; opacity: 1.5"></i><p ><b style="color:black">Masonry / &nbsp&nbsp&nbsp&nbsp&nbsp&nbspMamposteria</b></p>'
+          },
+          layer7: {
+          layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+          legend: '<i style="background:#87ceeb; opacity: 1.5"></i><p ><b style="color:black">Renov.</b></p>'
+          },
+          layer8: {
+              layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/cjepk5hhz5o9w2rozqj353ut4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+              legend: '<i style="background:#879ceb; opacity: 1.5"></i><p ><b style="color:black">Adicion / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAdicion</b></p>'
+          },
+          layer9: {
+              layer: L.tileLayer('https://api.mapbox.com/styles/v1/stoopkid/cjuby76sc08vi1fpc6clk793f/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic3Rvb3BraWQiLCJhIjoiY2pkcGFhdnFxMGMyZDJ5bzNzNDBnNnhheSJ9.hX4mpG7NWNi_cL4KVLt2aw'),
+              legend: '<i style="background:#ceeb87; opacity: 1.5"></i><p ><b style="color:black">Moderna / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspModern</b></p>'
+          },
+          layer10: {
+          layer: L.tileLayer('https://api.mapbox.com/styles/v1/stoopkid/cjuby971r08t81fp3mqd4qlpd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic3Rvb3BraWQiLCJhIjoiY2pkcGFhdnFxMGMyZDJ5bzNzNDBnNnhheSJ9.hX4mpG7NWNi_cL4KVLt2aw'),
+          legend: '<i style="background:#ebd687; opacity: 1.5"></i><p ><b style="color:black">Madera / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWood</b></p>'
+      },
+      layer11: {
+      layer: L.tileLayer('https://api.mapbox.com/styles/v1/stoopkid/cjuby971r08t81fp3mqd4qlpd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic3Rvb3BraWQiLCJhIjoiY2pkcGFhdnFxMGMyZDJ5bzNzNDBnNnhheSJ9.hX4mpG7NWNi_cL4KVLt2aw'),
+      legend: '<i style="background:#ebd687; opacity: 1.5"></i><p ><b style="color:black">Madera / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWood</b></p>'
+  }
+
+      };
+
+      var scenes = {
+          scene1: {lat: 23.129802, lng: -22.335393, zoom: 3, layers: [layers.layer1], name: "scene 1"},
+          scene2: {lat: 23.129802, lng: -22.335393, zoom: 3, layers: [layers.layer2], name: "scene 2"},
+          scene3: {lat: 16.068392, lng: 90.432074, zoom: 5, layers: [layers.layer4], name: "scene 3"},
+          scene4: {lat: 12.026102, lng:-87.155692, zoom: 6, layers: [layers.layer5], name: "scene 4"},
+          scene5: {lat: 38.430007, lng: 27.101159, zoom: 10, layers: [layers.layer6], name: "scene 5"},
+          scene6: {lat: 33.904392, lng: 35.488404, zoom: 10, layers: [layers.layer7], name: "scene 6"},
+          scene7: {lat:  23.129802, lng: -22.335393, zoom: 3, layers: [layers.layer8], name: "scene 7"},
+          scene8: {lat: 23.128602, lng: -82.336693, zoom: 17, layers: [layers.layer9], name: "scene 8"},
+          scene9: {lat: 23.128602, lng: -82.336693, zoom: 17, layers: [layers.layer10], name: "scene 9"},
+          scene10: {lat: 23.128602, lng: -82.336693, zoom: 17, layers: [layers.layer11], name: "scene 10"},
+
+
+      };
+
+      $('#storymap').storymap({
+          scenes: scenes,
+          baselayer: layers.layer3,
+          legend: true,
+          loader: true,
+          flyto: true,
+          credits:  "Build with <i class='material-icons' style='color: red; font-size: 10px;'>favorite</i> from Bo Zhao",
+          scalebar: true,
+          scrolldown: true,
+          progressline: true,
+          navwidget: true,
+          createMap: function () {
+              var map = L.map($(".storymap-map")[0], {zoomControl: false}).setView([23.128602, -82.335393], 7);
+              basemap = this.baselayer.layer.addTo(map);
+              return map;
+          }
+      });
+
+</script>
+<script src="vendor/jquery.min.js" type="text/javascript"></script>
+<script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="vendor/jquery.easing.js" type="text/javascript"></script>
+<script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+<script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+<script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+<script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
+<script src="vendor/jquery.appear.js" type="text/javascript"></script>
+<script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+<script src="js/layout.min.js" type="text/javascript"></script>
+<script src="js/components/progress-bar.min.js" type="text/javascript"></script>
+<script src="js/components/masonry.min.js" type="text/javascript"></script>
+<script src="js/components/wow.min.js" type="text/javascript"></script>
+
+</body>
+
+
+
+
+
+</html>
