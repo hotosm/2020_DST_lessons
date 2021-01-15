@@ -79,7 +79,7 @@ a:focus, a:hover, a:active {
   right: -15px;
   width: 9px;
   height: 2px;
-  background: #17bed2;
+  background: #fcb533;
   content: " ";
 }
 
@@ -135,13 +135,13 @@ h4 {
 
 ::-webkit-selection {
   color: #fff;
-  background: #17bed2;
+  background: #fcb533;
   text-shadow: none;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #17bed2;
+  background: #fcb533;
   text-shadow: none;
 }
 
@@ -704,7 +704,7 @@ fieldset[disabled] .btn-theme {
 
 .header .nav-item-child:hover, .header .nav-item-child:focus {
   background: inherit;
-  color: #17bed2;
+  color: #fcb533;
 }
 
 .header .nav-item-hover {
@@ -961,7 +961,7 @@ fieldset[disabled] .btn-theme {
   	[Text Colors]
 ------------------------------------------------------------------*/
 .color-base {
-  color: #17bed2 !important;
+  color: #fcb533 !important;
 }
 
 .color-base2 {
