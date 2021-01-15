@@ -200,6 +200,13 @@
                     
                   </div>
             </section>
+            <section data-scene="scene8" style="margin-top: 50%;">
+              <h2><a style="background-color:#d73f3f;color:#ffffff;font-family: 'Barlow Condensed', sans-serif;">&nbspCOVID-19 RESPONSE&nbsp</a></h2>
+              <p style="font-family: 'Barlow', sans-serif;">2020 has been a convulsed year, but it has also brought the creation of a permanently-staffed global Disaster Services Team, and with it, the opportunity of deeper analysis on how HOT responds -or activates- to emergencies. Historically, it has been difficult to quantify the impact of responses, and 2020 has not been an exception. To tackle this challenge, the DST plans to ensure there is an After Action Review for a 100% of the activations.</p>
+              <p>Compliance with the OpenStreetMap Foundation’s Organized Editing Guidelines has been a challenge for partner organizations. Whether these are viewed as required or not, this past year there was at least one incident which possibly could have been avoided by following the guidelines.</p>
+              <p>Finally, where previously it was rare to find a country or even region that had an OSM community, now it is becoming rare that these do not have. It was great to observe many OSM communities strengthening, becoming self-sufficient, and able to lead disaster response locally. The latter has allowed HOT to switch its role, from leading to supporting these partners on its activations.</p>               
+            <img style="width: 100%; height: 40%;" src="https://s3.amazonaws.com/regla.survey/gallery/gar/garcia_block37/garcia_block37_8a.jpg" class="img-responsive" alt="responsive image" alt-text="Crater Lake and Wizard Island">
+            </section>
           </div>
 
       </div>
@@ -241,17 +248,17 @@
               legend: '<i style="background:#b0b5be; opacity: 1.5"></i><p ><b style="color:black">Activation</b></p><br><i style="background:#eb879c; opacity: 1.5"></i><p ><b style="color:black">COVID-19</b></p>'
           },
           layer9: {
-              layer: L.tileLayer('https://api.mapbox.com/styles/v1/stoopkid/cjuby76sc08vi1fpc6clk793f/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic3Rvb3BraWQiLCJhIjoiY2pkcGFhdnFxMGMyZDJ5bzNzNDBnNnhheSJ9.hX4mpG7NWNi_cL4KVLt2aw'),
-              legend: '<i style="background:#ceeb87; opacity: 1.5"></i><p ><b style="color:black">Moderna / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspModern</b></p>'
+              layer: L.tileLayer('https://api.mapbox.com/styles/v1/hot/ckjrx5rtn73xu19liyfan4ar4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG90IiwiYSI6IlBtUmNiR1kifQ.dCS1Eu9DIRNZGktc24IwtA'),
+              legend: '<i style="background:#b0b5be; opacity: 1.5"></i><p ><b style="color:black">Activation</b></p><br><i style="background:#eb879c; opacity: 1.5"></i><p ><b style="color:black">COVID-19</b></p>'
           },
-          layer10: {
-          layer: L.tileLayer('https://api.mapbox.com/styles/v1/stoopkid/cjuby971r08t81fp3mqd4qlpd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic3Rvb3BraWQiLCJhIjoiY2pkcGFhdnFxMGMyZDJ5bzNzNDBnNnhheSJ9.hX4mpG7NWNi_cL4KVLt2aw'),
-          legend: '<i style="background:#ebd687; opacity: 1.5"></i><p ><b style="color:black">Madera / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWood</b></p>'
-      },
-      layer11: {
-      layer: L.tileLayer('https://api.mapbox.com/styles/v1/stoopkid/cjuby971r08t81fp3mqd4qlpd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic3Rvb3BraWQiLCJhIjoiY2pkcGFhdnFxMGMyZDJ5bzNzNDBnNnhheSJ9.hX4mpG7NWNi_cL4KVLt2aw'),
-      legend: '<i style="background:#ebd687; opacity: 1.5"></i><p ><b style="color:black">Madera / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWood</b></p>'
-  }
+  //         layer10: {
+  //         layer: L.tileLayer('https://api.mapbox.com/styles/v1/stoopkid/cjuby971r08t81fp3mqd4qlpd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic3Rvb3BraWQiLCJhIjoiY2pkcGFhdnFxMGMyZDJ5bzNzNDBnNnhheSJ9.hX4mpG7NWNi_cL4KVLt2aw'),
+  //         legend: '<i style="background:#ebd687; opacity: 1.5"></i><p ><b style="color:black">Madera / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWood</b></p>'
+  //     },
+  //     layer11: {
+  //     layer: L.tileLayer('https://api.mapbox.com/styles/v1/stoopkid/cjuby971r08t81fp3mqd4qlpd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic3Rvb3BraWQiLCJhIjoiY2pkcGFhdnFxMGMyZDJ5bzNzNDBnNnhheSJ9.hX4mpG7NWNi_cL4KVLt2aw'),
+  //     legend: '<i style="background:#ebd687; opacity: 1.5"></i><p ><b style="color:black">Madera / &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWood</b></p>'
+  // }
 
       };
 
@@ -263,7 +270,7 @@
           scene5: {lat: 38.430007, lng: 27.101159, zoom: 14, layers: [layers.layer6], name: "scene 5"},
           scene6: {lat: 33.874277, lng: 35.472357, zoom: 13, layers: [layers.layer7], name: "scene 6"},
           scene7: {lat:  23.129802, lng: -22.335393, zoom: 3, layers: [layers.layer8], name: "scene 7"},
-          scene8: {lat: 23.128602, lng: -82.336693, zoom: 17, layers: [layers.layer9], name: "scene 8"},
+          scene8: {lat:  23.129802, lng: -22.335393, zoom: 3, layers: [layers.layer9], name: "scene 8"},
           scene9: {lat: 23.128602, lng: -82.336693, zoom: 17, layers: [layers.layer10], name: "scene 9"},
           scene10: {lat: 23.128602, lng: -82.336693, zoom: 17, layers: [layers.layer11], name: "scene 10"},
 
