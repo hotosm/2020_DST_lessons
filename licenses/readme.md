@@ -343,7 +343,7 @@ Till now, in the `script` of the `body` element, you have the following code sni
         legend: true,
         loader: true,
         flyto: false,
-        credits: credits:  "Build with <i class='material-icons' style='color: red; font-size: 10px;'>favorite</i> from Bo Zhao",
+        credits: credits:  "<i class='material-icons' style='color: black; font-size: 10px;'>copyright</i> a href='https://www.openstreetmap.org/copyright'>OpenStreetMap contributors</a> <i class='material-icons' style='color: black; font-size: 10px;'>add_location_alt</i> Build with <i class='material-icons' style='color: red; font-size: 10px;'>favorite</i> from Bo Zhao",
         scalebar: true,
         scrolldown: false,
         progressline: true,
